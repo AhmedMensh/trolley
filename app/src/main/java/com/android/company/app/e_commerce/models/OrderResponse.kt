@@ -12,6 +12,3 @@ data class OrderResponse(
     val totalPrice: String? = null,
     val userId: String? = null
 )
-
-
-//nd

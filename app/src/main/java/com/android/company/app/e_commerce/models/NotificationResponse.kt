@@ -1,4 +1,7 @@
 package com.android.company.app.e_commerce.models
 
-data class NotificationResponse(val name : String ? = null,
-                                val id : Int ? = null)
+data class NotificationResponse(
+    val notificationsText: String? = null,
+    val userId: String? = null,
+    val notificationId: String? = null
+)

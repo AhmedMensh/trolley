@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.company.app.e_commerce.R
 import com.android.company.app.e_commerce.models.CartResponse
 import com.android.company.app.e_commerce.models.NotificationResponse
+import kotlinx.android.synthetic.main.notification_item.view.*
 
 
 class NotificationsAdapter() : ListAdapter<NotificationResponse, NotificationsAdapter.ViewHolder>(DiffCallback) {
@@ -17,10 +18,10 @@ class NotificationsAdapter() : ListAdapter<NotificationResponse, NotificationsAd
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        var view = ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.notification_item, parent, false))
+        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.notification_item, parent, false))
 
 
-        return view
+
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -31,7 +32,7 @@ class NotificationsAdapter() : ListAdapter<NotificationResponse, NotificationsAd
 
     object DiffCallback : DiffUtil.ItemCallback<NotificationResponse>() {
         override fun areItemsTheSame(oldItem: NotificationResponse, newItem: NotificationResponse): Boolean {
-            return oldItem.id == newItem.id
+            return oldItem.notificationId == newItem.notificationId
         }
 
         override fun areContentsTheSame(oldItem: NotificationResponse, newItem: NotificationResponse): Boolean {
@@ -43,8 +44,7 @@ class NotificationsAdapter() : ListAdapter<NotificationResponse, NotificationsAd
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
         fun bind(notification: NotificationResponse){
-
-
+            itemView.notificationsTitleTV.text = notification.notificationsText
         }
     }
 }
