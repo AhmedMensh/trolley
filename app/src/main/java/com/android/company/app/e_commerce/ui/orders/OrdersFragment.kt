@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 
 import com.android.company.app.e_commerce.R
+import kotlinx.android.synthetic.main.fragment_orders.*
 
 /**
  * A simple [Fragment] subclass.
@@ -19,6 +20,7 @@ import com.android.company.app.e_commerce.R
 class OrdersFragment : Fragment(R.layout.fragment_orders) {
 
     private lateinit var viewModel: OrdersViewModel
+    private val adapter : OrdersAdapter by lazy { OrdersAdapter() }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -28,7 +30,9 @@ class OrdersFragment : Fragment(R.layout.fragment_orders) {
         viewModel.getOrders().observe(viewLifecycleOwner , Observer {
 
             it?.let {
-                Log.e("ORDERS","$it")
+                ordersRV.setHasFixedSize(true)
+                ordersRV.adapter = adapter
+                adapter.submitList(it)
             }
         })
     }

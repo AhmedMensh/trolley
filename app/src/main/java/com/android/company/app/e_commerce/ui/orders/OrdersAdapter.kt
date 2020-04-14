@@ -8,21 +8,17 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.android.company.app.e_commerce.R
 import com.android.company.app.e_commerce.models.OrderResponse
-import com.android.company.app.e_commerce.models.ProductResponse
-import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.product_item.view.*
+import kotlinx.android.synthetic.main.order_item.view.*
 
 
-class OrdersAdapter() : ListAdapter<OrderResponse, OrdersAdapter.ViewHolder>(DiffCallback) {
+class OrdersAdapter : ListAdapter<OrderResponse, OrdersAdapter.ViewHolder>(DiffCallback) {
 
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        var view = ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.product_item, parent, false))
+        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.order_item, parent, false))
 
-
-        return view
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -46,10 +42,12 @@ class OrdersAdapter() : ListAdapter<OrderResponse, OrdersAdapter.ViewHolder>(Dif
 
         fun bind(order: OrderResponse){
 
-//            itemView.productNameTV.text = product.itemTitleEN
-//            itemView.productPriceTV.text =  product.itemPrice.toString()
-//            itemView.productWeightTV.text =  product.weightEN.toString()
-//            Glide.with(itemView).load(product.itemImage).into(itemView.productImgV)
+            itemView.orderNameTV.text = " Order #${order.orderNumber.toString()}"
+            itemView.orderItemsNameTv.text = order.ordersTitle
+            itemView.orderItemsUnitTv.text = order.ordersUnits
+            itemView.orderItemsPriceTv.text = order.ordersPrice
+            itemView.totalPriceTV.text = order.totalPrice
+            itemView.deliveryStatusTV.text =order.deliveryFees
 
         }
     }
