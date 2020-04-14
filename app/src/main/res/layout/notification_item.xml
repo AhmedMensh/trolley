@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="4dp"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="4dp"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/green"
+        android:textColor="@android:color/black"
+        android:drawableStart="@drawable/ic_notifications_black_24dp"
+        android:text="Greatly cottage thought fortune no mention he. Of mr certainty arranging am smallness by conveying"/>
+
+</androidx.cardview.widget.CardView>

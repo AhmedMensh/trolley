@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.more.ui.about.AboutFragment">
+
+
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/tool_bar" />
+
+    <ImageView
+        android:id="@+id/logoImgV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:layout_constraintWidth_percent=".2"
+        app:srcCompat="@drawable/ic_product" />
+
+
+    <TextView
+        android:id="@+id/aboutUsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/about_us"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoImgV" />
+
+    <TextView
+        android:id="@+id/aboutAppTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="About Us About Us About Us About Us About Us About Us About Us About Us About Us About Us About Us"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aboutUsLabel" />
+
+
+    <TextView
+        android:id="@+id/visitUsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="You can visit us on social media"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aboutAppTV" />
+
+
+    <ImageView
+        android:id="@+id/facebookImgV"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/snapshotImgV"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/visitUsLabel"
+        app:srcCompat="@drawable/ic_facebook" />
+
+    <ImageView
+        android:id="@+id/snapshotImgV"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/twitterImgV"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintStart_toEndOf="@+id/facebookImgV"
+        app:layout_constraintTop_toBottomOf="@id/visitUsLabel"
+        app:srcCompat="@drawable/ic_snapchat" />
+
+    <ImageView
+        android:id="@+id/twitterImgV"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintEnd_toStartOf="@+id/instgramImgV"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/snapshotImgV"
+        app:layout_constraintTop_toBottomOf="@id/visitUsLabel"
+        app:srcCompat="@drawable/ic_twitter" />
+
+    <ImageView
+        android:id="@+id/instgramImgV"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toEndOf="@+id/twitterImgV"
+        app:layout_constraintTop_toBottomOf="@id/visitUsLabel"
+        app:srcCompat="@drawable/ic_instagram" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
