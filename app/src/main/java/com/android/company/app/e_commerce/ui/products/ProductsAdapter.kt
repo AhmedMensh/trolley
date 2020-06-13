@@ -7,12 +7,13 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.android.company.app.e_commerce.R
-import com.android.company.app.e_commerce.models.ProductResponse
+import com.android.company.app.e_commerce.data.models.ProductResponse
+import com.android.company.app.e_commerce.utlities.ItemClickListener
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.product_item.view.*
 
 
-class ProductsAdapter() : ListAdapter<ProductResponse, ProductsAdapter.ViewHolder>(DiffCallback) {
+class ProductsAdapter(private val listener : ItemClickListener<ProductResponse>) : ListAdapter<ProductResponse, ProductsAdapter.ViewHolder>(DiffCallback) {
 
 
 
@@ -26,7 +27,7 @@ class ProductsAdapter() : ListAdapter<ProductResponse, ProductsAdapter.ViewHolde
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        holder.bind(getItem(position))
+        holder.bind(getItem(position) ,listener)
     }
 
 
@@ -43,12 +44,17 @@ class ProductsAdapter() : ListAdapter<ProductResponse, ProductsAdapter.ViewHolde
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-        fun bind(product: ProductResponse){
+        fun bind(
+            product: ProductResponse,
+            listener: ItemClickListener<ProductResponse>
+        ){
 
             itemView.productNameTV.text = product.itemTitleEN
             itemView.productPriceTV.text =  product.itemPrice.toString()
             itemView.productWeightTV.text =  product.weightEN.toString()
             Glide.with(itemView).load(product.itemImage).into(itemView.productImgV)
+
+            itemView.setOnClickListener { listener.onItemClick(product) }
 
         }
     }

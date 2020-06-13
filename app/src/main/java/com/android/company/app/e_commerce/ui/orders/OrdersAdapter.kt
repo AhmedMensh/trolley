@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.android.company.app.e_commerce.R
-import com.android.company.app.e_commerce.models.OrderResponse
+import com.android.company.app.e_commerce.data.models.OrderResponse
 import kotlinx.android.synthetic.main.order_item.view.*
 
 

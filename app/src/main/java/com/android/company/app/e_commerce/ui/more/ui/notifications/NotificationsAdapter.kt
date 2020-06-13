@@ -7,8 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.android.company.app.e_commerce.R
-import com.android.company.app.e_commerce.models.CartResponse
-import com.android.company.app.e_commerce.models.NotificationResponse
+import com.android.company.app.e_commerce.data.models.NotificationResponse
 import kotlinx.android.synthetic.main.notification_item.view.*
 
 

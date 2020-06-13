@@ -4,11 +4,9 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.android.company.app.e_commerce.models.CategoryResponse
+import com.android.company.app.e_commerce.data.models.CategoryResponse
 import com.android.company.app.e_commerce.utlities.Constants
 import com.google.firebase.database.*
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
 
 class CategoriesViewModel : ViewModel() {
 

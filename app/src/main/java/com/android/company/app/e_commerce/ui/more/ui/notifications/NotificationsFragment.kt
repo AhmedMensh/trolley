@@ -3,15 +3,11 @@ package com.android.company.app.e_commerce.ui.more.ui.notifications
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 
 import com.android.company.app.e_commerce.R
-import com.android.company.app.e_commerce.models.CartResponse
-import com.android.company.app.e_commerce.models.NotificationResponse
 import kotlinx.android.synthetic.main.fragment_notifications.*
 import kotlinx.android.synthetic.main.tool_bar.*
 

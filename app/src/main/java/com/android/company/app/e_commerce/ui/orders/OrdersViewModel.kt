@@ -4,9 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.android.company.app.e_commerce.models.CategoryResponse
-import com.android.company.app.e_commerce.models.OrderResponse
-import com.android.company.app.e_commerce.models.ProductResponse
+import com.android.company.app.e_commerce.data.models.OrderResponse
 import com.android.company.app.e_commerce.utlities.Constants
 import com.google.firebase.database.*
 

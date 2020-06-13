@@ -2,21 +2,18 @@ package com.android.company.app.e_commerce.ui.categories
 
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.company.app.e_commerce.R
-import com.android.company.app.e_commerce.models.CategoryResponse
+import com.android.company.app.e_commerce.data.models.CategoryResponse
 import com.android.company.app.e_commerce.utlities.ItemClickListener
 import kotlinx.android.synthetic.main.fragment_categories.*
 import kotlinx.android.synthetic.main.tool_bar.*
-import java.util.*
 
 
 /**

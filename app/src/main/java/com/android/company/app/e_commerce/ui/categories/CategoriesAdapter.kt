@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.android.company.app.e_commerce.R
-import com.android.company.app.e_commerce.models.CategoryResponse
+import com.android.company.app.e_commerce.data.models.CategoryResponse
 import com.android.company.app.e_commerce.utlities.ItemClickListener
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.category_item.view.*
